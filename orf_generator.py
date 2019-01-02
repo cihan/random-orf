@@ -17,7 +17,7 @@ if query_dna.find('atg') != -1:
 		print('Your randon ORF sequence is: ', orf)
 		#calculate GC content of the ORF,
 		gc=(orf.count('c')+orf.count('g'))/len(orf)*100
-		print('Your sequence is ', str(len(orf)),'length. And your sequence include', str(float(round(gc,2))), '% GC bases.')
+		print('Your sequence is {} length. And your sequence include {}% GC bases.'.format((str(len(orf))), str(float(round(gc,2)))))
 	else:
 #output the random DNA sequence
 		print('*'*40,'\n','No STOP Codon','\n','*'*40)
@@ -27,4 +27,3 @@ else:
 	print('Your random DNA sequence is: ', orf)
 
 #BLAST this sequence...
-#print('Your sequence is %s length. And your sequence include %s % GC bases.' % (str(len(orf)), str(len(orf))))
